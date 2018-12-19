@@ -1,5 +1,5 @@
 const express = require("express");
-const path = require('path');
+const path = require("path");
 
 const { 
   index_router,
@@ -16,9 +16,9 @@ class Application {
   }
 
   setConfiguration() {
-    this.app.set('views', path.join(__dirname,'views'));
-    this.app.set('view engine', 'pug');
-    this.app.use(express.static(path.join(__dirname, 'public')));
+    this.app.set("views", path.join(__dirname,"views"));
+    this.app.set("view engine", "pug");
+    this.app.use(express.static(path.join(__dirname, "public")));
   }
 
   setRoutes() {

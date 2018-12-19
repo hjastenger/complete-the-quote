@@ -1,6 +1,6 @@
 const express = require("express");
-const { get_random_quote } = require('../lib/quotes');
-const helpers = require('../helpers/index');
+const { get_random_quote } = require("../lib/quotes");
+const helpers = require("../helpers/index");
 
 const { logger } = require("../logger");
 
@@ -11,16 +11,16 @@ router.get("/", (req, res) => {
     .then(quote => {
       const maskedQuote = helpers.replace_random_entries(quote.quote.split(/\s+/)).join(" ");
 
-      res.render('index', {
+      res.render("index", {
         title: "Quote Quizer",
         quote: quote,
         maskedQuote: maskedQuote
-      })
+      });
     })
     .catch((e) => {
       res.status(500).end();
-      logger.log("error", e.message)
-    })
+      logger.log("error", e.message);
+    });
 });
 
 function mountNotFoundHandler() {

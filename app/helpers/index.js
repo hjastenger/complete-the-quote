@@ -14,4 +14,4 @@ exports.replace_random_entries = function(list) {
   const exclude = Array.from({length: items}, () => get_random_int(list.length));
   exclude.forEach((ex) => list[ex] = ".".repeat(list[ex].length));
   return list;
-}
+};

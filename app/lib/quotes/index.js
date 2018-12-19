@@ -24,6 +24,6 @@ function make_request(options) {
 }
 
 exports.get_random_quote = function() {
-  const resourceURL = new URL(`${QUOTES_BASE_URL}/random.json`)
+  const resourceURL = new URL(`${QUOTES_BASE_URL}/random.json`);
   return make_request(resourceURL).then(parse_request);
-}
+};

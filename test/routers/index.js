@@ -15,10 +15,10 @@ describe("general API router", () => {
 
   before("stub http request", () => {
     nock("http://quotes.stormconsultancy.co.uk").persist()
-      .get(/\/random.json/).reply(200, quoteFixture)
+      .get(/\/random.json/).reply(200, quoteFixture);
 
-    const stub = sinon.stub(helper, "replace_random_entries")
-    stub.onCall(0).returns(quoteFixture.quote.split(/\s+/))
+    const stub = sinon.stub(helper, "replace_random_entries");
+    stub.onCall(0).returns(quoteFixture.quote.split(/\s+/));
   });
 
   before("perform GET request", (done) => {
