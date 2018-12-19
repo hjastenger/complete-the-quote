@@ -1,0 +1,31 @@
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/css/application.css')
+  body
+    div.container
+      div.quote-head
+        h2 QUOTE QUIZER 9000.
+        a Test your quote knowledge by completing the following quote
+
+      div.question-quote(data-answer=quote.quote)
+        h2= maskedQuote
+
+      div.question-input
+        input.quote-input
+        button.question-button= "check"
+
+    script.
+
+      const question = document.querySelector(".question-quote")
+      const button = document.querySelector("button.question-button")
+      const input = document.querySelector("input.quote-input")
+      
+      button.addEventListener("click", function() {
+        if(input.value === question.dataset.answer) {
+          question.style.backgroundColor = "green";
+        } else {
+          question.style.backgroundColor = "red";
+        }
+        question.querySelector("h2").innerHTML = question.dataset.answer;
+      })

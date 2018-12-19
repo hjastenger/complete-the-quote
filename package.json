@@ -1,0 +1,27 @@
+{
+  "name": "fill-in-the-blanks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "NODE_ENV=test mocha --recursive --reporter dot",
+    "lint": "eslint --ext .js '*.js' '**/*.js'",
+    "lint-fix": "eslint --ext .js '*.js' '**/*.js' --fix"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.16.4",
+    "winston": "3.1.0"
+  },
+  "devDependencies": {
+    "chai": "4.2.0",
+    "chai-http": "4.2.0",
+    "eslint": "5.9.0",
+    "mocha": "5.2.0",
+    "nock": "10.0.2",
+    "pug": "2.0.3",
+    "sinon": "7.2.2"
+  }
+}
