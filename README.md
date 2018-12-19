@@ -12,7 +12,9 @@ npm install
 # Start application.
 ```
 npm start
+browse to localhost:3000
 ```
+
 
 # Run tests.
 ```
